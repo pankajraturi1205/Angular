@@ -8,7 +8,8 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from '../shared/store/counter.reducer';
 @NgModule({
   declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent],
   imports: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     PostRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    StoreModule.forRoot({ counter: counterReducer }),
   ],
 })
 export class PostModule {}

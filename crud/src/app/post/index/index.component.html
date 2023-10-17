@@ -1,9 +1,11 @@
+<app-view></app-view>
 <table class="table">
   <thead class="table-dark">
     <tr>
       <th>ID</th>
       <th>Title</th>
       <th>Body</th>
+      <th>Button</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +13,7 @@
       <td>{{ post.id }}</td>
       <td>{{ post.title }}</td>
       <td>{{ post.body }}</td>
+      <td><button class="button" (click)="increment()">Increment</button></td>
     </tr>
   </tbody>
 </table>
